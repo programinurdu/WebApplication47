@@ -22,9 +22,11 @@ namespace WebApplication47.Models
         public string Mobile { get; set; }
 
         [Display(Name = "Date of Birth:")]
+        [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
 
         [Display(Name = "Notes:")]
+        [DataType(DataType.MultilineText)]
         public string Notes { get; set; }
     }
 }

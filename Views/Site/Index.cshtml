@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="StudentInfo" class="btn btn-success">New Student</a>
 </p>
 
 @if (Model.Count() > 0)
@@ -59,9 +59,8 @@
                         @Html.DisplayFor(modelItem => item.Notes)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        <a asp-action="StudentInfo" class="btn btn-primary" asp-route-studentid='@item.StudentId'>Edit</a>
+                        <a asp-action="DeleteStudent" class="btn btn-info" asp-route-studentid='@item.StudentId'>Delete</a>
                     </td>
                 </tr>
             }
